@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Новогодний подарок от Козочки — готовые детские наборы</title>
+  <meta name="description" content="Готовый новогодний подарочный набор для детей: раскраска, карандаши, открытка, пластилин, наклейки, брелок-попит и зефирка-косичка. Заказ в Telegram." />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="snow" id="snow" aria-hidden="true"></div>
+
+  <header class="hero">
+    <nav class="nav">
+      <div class="nav-logo">🐐 Подарок от Козочки</div>
+      <a href="#order" class="btn btn-small">Заказать</a>
+    </nav>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Новогодние наборы 2026</p>
+      <h1 class="hero-title">Новогодний<br /><span>подарок</span><br />от Козочки</h1>
+      <p class="hero-subtitle">
+        Готовый подарочный набор мелочей, который порадует любого ребёнка —
+        собран, упакован и ждёт встречи с Новым годом.
+      </p>
+      <div class="hero-actions">
+        <a href="#order" class="btn btn-primary">Заказать набор — <span id="hero-price">600</span> ₽</a>
+        <a href="#contents" class="btn btn-ghost">Что внутри?</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contents" id="contents">
+      <h2 class="section-title">Что внутри набора</h2>
+      <p class="section-subtitle">8 приятных мелочей в одной подарочной упаковке</p>
+
+      <div class="grid">
+        <article class="card">
+          <img src="assets/icons/gift-bag.svg" alt="" class="card-icon" />
+          <h3>Подарочный пакетик</h3>
+          <p>Красивая упаковка — набор можно сразу дарить</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/coloring-book.svg" alt="" class="card-icon" />
+          <h3>Раскраска</h3>
+          <p>Новогодние сюжеты и задания для творчества</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/pencils.svg" alt="" class="card-icon" />
+          <h3>Карандаши</h3>
+          <p>Набор цветных карандашей для раскраски</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/postcard.svg" alt="" class="card-icon" />
+          <h3>Открытка</h3>
+          <p>Праздничная открытка с пожеланиями</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/clay.svg" alt="" class="card-icon" />
+          <h3>Пластилин</h3>
+          <p>3 пакетика мягкого пластилина — лепи что угодно</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/stickers.svg" alt="" class="card-icon" />
+          <h3>Наклейки</h3>
+          <p>Яркий лист наклеек на новогоднюю тему</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/popit.svg" alt="" class="card-icon" />
+          <h3>Брелок попит</h3>
+          <p>Антистресс-брелок, который любят все дети</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/marshmallow.svg" alt="" class="card-icon" />
+          <h3>Зефирка-косичка</h3>
+          <p>Сладкий новогодний бонус к набору</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="price-section" id="order">
+      <div class="price-card">
+        <p class="price-eyebrow">Стоимость набора</p>
+        <div class="price-value"><span id="price">600</span><span class="price-currency">₽</span></div>
+        <p class="price-note">за один готовый новогодний набор</p>
+
+        <div class="order-buttons">
+          <a id="tg-btn" class="btn btn-tg" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="btn-icon" aria-hidden="true"><path fill="currentColor" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.3-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-2 1.93c-.23.23-.42.42-.82.42z"/></svg>
+            Написать в Telegram
+          </a>
+          <a id="phone-btn" class="btn btn-phone" href="#">
+            <svg viewBox="0 0 24 24" class="btn-icon" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.02z"/></svg>
+            <span id="phone-label">Позвонить</span>
+          </a>
+        </div>
+
+        <p class="price-hint">Можно написать в Telegram или позвонить/написать на тот же номер в MAX</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Новогодний подарок от Козочки. Сделано с ❤ для детей</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
