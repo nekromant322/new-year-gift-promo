@@ -5,7 +5,7 @@
   document.querySelectorAll("#price, #hero-price").forEach((el) => {
     el.textContent = cfg.price;
   });
-  document.querySelectorAll("#price-wholesale").forEach((el) => {
+  document.querySelectorAll("#price-wholesale, #price-main").forEach((el) => {
     el.textContent = cfg.priceWholesale;
   });
 
