@@ -164,10 +164,10 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 10px 24px rgba(42, 171, 238, 0.35);
 }
 
-.btn-phone {
-  background: var(--green);
+.btn-max {
+  background: #7c67fe;
   color: #fff;
-  box-shadow: 0 10px 24px rgba(46, 125, 91, 0.35);
+  box-shadow: 0 10px 24px rgba(124, 103, 254, 0.35);
 }
 
 .btn-icon { width: 20px; height: 20px; flex-shrink: 0; }
@@ -348,9 +348,16 @@ img { max-width: 100%; display: block; }
 
 .bulk-text {
   max-width: 560px;
-  margin: 14px auto 28px;
+  margin: 14px auto 0;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
+}
+
+.bulk-price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin: 14px 0 28px;
 }
 
 /* ---------- Price ---------- */

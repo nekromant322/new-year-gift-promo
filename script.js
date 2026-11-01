@@ -1,9 +1,12 @@
 (function () {
   const cfg = window.SITE_CONFIG || {};
 
-  // Price
+  // Prices
   document.querySelectorAll("#price, #hero-price").forEach((el) => {
     el.textContent = cfg.price;
+  });
+  document.querySelectorAll("#price-wholesale").forEach((el) => {
+    el.textContent = cfg.priceWholesale;
   });
 
   // Telegram button
@@ -17,11 +20,9 @@
     bulkBtn.href = `${cfg.telegramUrl}${text}`;
   }
 
-  // Phone button
-  const phoneBtn = document.getElementById("phone-btn");
-  const phoneLabel = document.getElementById("phone-label");
-  if (phoneBtn && cfg.phoneHref) phoneBtn.href = cfg.phoneHref;
-  if (phoneLabel && cfg.phoneDisplay) phoneLabel.textContent = cfg.phoneDisplay;
+  // MAX button
+  const maxBtn = document.getElementById("max-btn");
+  if (maxBtn && cfg.maxUrl) maxBtn.href = cfg.maxUrl;
 
   // Footer year
   const yearEl = document.getElementById("year");
