@@ -10,6 +10,13 @@
   const tgBtn = document.getElementById("tg-btn");
   if (tgBtn && cfg.telegramUrl) tgBtn.href = cfg.telegramUrl;
 
+  // Bulk order Telegram button (with prefilled message)
+  const bulkBtn = document.getElementById("bulk-btn");
+  if (bulkBtn && cfg.telegramUrl) {
+    const text = cfg.telegramBulkMessage ? `?text=${encodeURIComponent(cfg.telegramBulkMessage)}` : "";
+    bulkBtn.href = `${cfg.telegramUrl}${text}`;
+  }
+
   // Phone button
   const phoneBtn = document.getElementById("phone-btn");
   const phoneLabel = document.getElementById("phone-label");
