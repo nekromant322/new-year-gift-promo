@@ -2,10 +2,10 @@
   const cfg = window.SITE_CONFIG || {};
 
   // Prices
-  document.querySelectorAll("#price, #hero-price").forEach((el) => {
+  document.querySelectorAll("#price").forEach((el) => {
     el.textContent = cfg.price;
   });
-  document.querySelectorAll("#price-wholesale, #price-main").forEach((el) => {
+  document.querySelectorAll("#price-wholesale, #price-main, #hero-price").forEach((el) => {
     el.textContent = cfg.priceWholesale;
   });
 
