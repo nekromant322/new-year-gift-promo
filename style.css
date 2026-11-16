@@ -249,6 +249,12 @@ img { max-width: 100%; display: block; }
   padding: 0;
 }
 
+.card-photo-book {
+  object-fit: cover;
+  object-position: 58% 30%;
+  padding: 0;
+}
+
 .card h3 {
   margin: 0 0 8px;
   font-size: 1.12rem;
