@@ -195,6 +195,18 @@ img { max-width: 100%; display: block; }
   font-size: 1.05rem;
 }
 
+.contents-video {
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+.contents-video video {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
