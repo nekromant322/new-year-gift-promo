@@ -197,11 +197,14 @@ img { max-width: 100%; display: block; }
 
 .contents-video {
   max-width: 560px;
+  width: 100%;
   margin: 0 auto 36px;
 }
 
 .contents-video video {
+  display: block;
   width: 100%;
+  max-width: 100%;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   background: #000;
