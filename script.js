@@ -53,6 +53,51 @@
     else img.addEventListener("load", () => removeBlackBackground(img));
   });
 
+  // Remove a flat studio backdrop (any color) by keying out pixels close to the
+  // color sampled from the photo's corners, rather than assuming pure black
+  function removeFlatBackground(img) {
+    try {
+      const canvas = document.createElement("canvas");
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0);
+      const w = canvas.width;
+      const h = canvas.height;
+      const imageData = ctx.getImageData(0, 0, w, h);
+      const d = imageData.data;
+
+      const samplePoints = [
+        [2, 2], [w - 3, 2], [2, h - 3], [w - 3, h - 3],
+        [Math.floor(w / 2), 2], [2, Math.floor(h / 2)],
+      ];
+      let r = 0, g = 0, b = 0;
+      samplePoints.forEach(([x, y]) => {
+        const i = (y * w + x) * 4;
+        r += d[i]; g += d[i + 1]; b += d[i + 2];
+      });
+      r /= samplePoints.length; g /= samplePoints.length; b /= samplePoints.length;
+
+      const tolerance = 28;
+      const feather = 25;
+      for (let i = 0; i < d.length; i += 4) {
+        const dr = d[i] - r, dg = d[i + 1] - g, db = d[i + 2] - b;
+        const dist = Math.sqrt(dr * dr + dg * dg + db * db);
+        if (dist < tolerance) d[i + 3] = 0;
+        else if (dist < tolerance + feather) d[i + 3] = Math.round(((dist - tolerance) / feather) * 255);
+      }
+      ctx.putImageData(imageData, 0, 0);
+      img.src = canvas.toDataURL("image/png");
+    } catch (e) {
+      // Canvas access failed (e.g. file:// origin) — keep original photo
+    }
+  }
+
+  document.querySelectorAll(".card-photo-flat-bg").forEach((img) => {
+    if (img.complete) removeFlatBackground(img);
+    else img.addEventListener("load", () => removeFlatBackground(img));
+  });
+
   // Footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
